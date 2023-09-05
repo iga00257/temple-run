@@ -12,7 +12,7 @@ export default function Temple() {
     <>
       <div className={`${styles.flex}`}>
         <div className={`${styles.temple}`}>
-          <Image src={temple} alt="temple" width={1000}></Image>
+          <Image src={temple} alt="temple" fill></Image>
         </div>
         <div className={`${styles.cloud}`}>
           <Image src={cloud} alt="cloud" width={1750}></Image>
