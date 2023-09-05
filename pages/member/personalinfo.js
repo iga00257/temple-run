@@ -16,6 +16,7 @@ import MemberNavbar from '@/components/common/memberNavbar/index.js'
 import ProfilePhoto from '@/components/common/profilePhoto'
 import Alert from '@/components/common/alert'
 import data from '@/components/mydata/memberNavbarData.js'
+import dayjs from 'dayjs'
 
 //bootstrap
 import { Container, Row, Col } from 'react-bootstrap'
@@ -30,7 +31,6 @@ export default function Personalinfo() {
   const [getImg, setGetImg] = useState('')
   const [modalIsOpen, setModalIsOpen] = useState(false) // 跟蹤 modal 是否打開
   const [cancelEditing, setCancelEditing] = useState(false)
-  const dayjs = require('dayjs')
   const [isIncorrect, setIsIncorrect] = useState(false)
   const [isUsed, setIsUsed] = useState(false)
   const [isUnChanged, setIsUnChanged] = useState(false)
