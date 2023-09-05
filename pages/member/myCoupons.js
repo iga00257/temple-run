@@ -4,7 +4,6 @@ import styles from '@/pages/member/myCoupons.module.sass'
 //hooks
 import { useState, useEffect, useContext } from 'react'
 import { useRouter } from 'next/router'
-import { CartDataContextProvider } from '@/contexts/CartCountContext'
 import CartDataContext from '@/contexts/CartDataContext'
 import WannaBuyDataContext from '@/contexts/WannaBuyDataContext'
 // bootstrap

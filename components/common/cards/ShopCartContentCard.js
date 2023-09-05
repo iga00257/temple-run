@@ -29,14 +29,12 @@ export default function ShopCartContentCard({
   pid = 2,
   cid = 1,
 }) {
-  if (isNaN(quantity)) return <Loading />
-
   // for navbar購物車數量
   const { cartCount, setCartCount, getCartCount } = useContext(CartCountContext)
 
   const { cartData, setCartData, getCartData } = useContext(CartDataContext)
   // for 更新數量
-  const [count, setCount] = useState(Number(quantity))
+  const [count, setCount] = useState(Number(quantity) || 3)
   // 商品類別 for url
   const category = TitleData[cid].id
 
@@ -61,6 +59,7 @@ export default function ShopCartContentCard({
         })
     }
   }
+  if (isNaN(quantity)) return <Loading />
 
   // 刪除個別商品(需要pid)
   const deleteFromCart = (pid) => {

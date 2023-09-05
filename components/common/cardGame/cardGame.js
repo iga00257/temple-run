@@ -258,9 +258,6 @@ export default function CardGame() {
 
             return // 終止後續的處理
           }
-
-          if (data) {
-          }
         })
         .catch((error) => {
           alert('簽到失敗', error)
@@ -339,9 +336,6 @@ export default function CardGame() {
             // alert(data.error) // 顯示 錯誤訊息
 
             return // 終止後續的處理
-          }
-
-          if (data) {
           }
         })
         .catch((error) => {

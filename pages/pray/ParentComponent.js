@@ -2,7 +2,7 @@
 import React from 'react'
 import Mazu3 from './mazu3'
 import Mazu4 from './mazu4'
-import { NumberProvider } from './NumberContext'
+import NumberProvider from './NumberContext'
 
 const ParentComponent = () => {
   return (

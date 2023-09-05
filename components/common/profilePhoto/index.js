@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import { AuthContextProvider } from '@/contexts/AuthContext'
 import AuthContext from '@/contexts/AuthContext'
 import React, { useState, useEffect, useContext, useRef } from 'react'

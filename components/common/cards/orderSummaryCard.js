@@ -23,7 +23,7 @@ export default function OrderSummary({
     {
       title: '訂單日期',
       content: data?.created_at
-        ? data?.created_at.slice(0, 10).replace(/\-/g, '/')
+        ? data?.created_at.slice(0, 10).replace(/-/g, '/')
         : data?.created_at,
     },
     {

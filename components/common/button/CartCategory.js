@@ -19,12 +19,12 @@ export default function CartCategory({ setIdFromChild, idFromChild }) {
   ]
 
   const router = useRouter()
-  if (idFromChild != router.query.tab) return
   const [id, setId] = useState(idFromChild)
 
   useEffect(() => {
     setIdFromChild(id)
   }, [id])
+  if (idFromChild != router.query.tab) return
 
   return (
     <>

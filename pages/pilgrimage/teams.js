@@ -198,28 +198,43 @@ export default function Teams({ onMove, onBgMove }) {
 
   useEffect(() => {
     const imageSources = [
-      sonaR, sonaRIdle, sonaL, sonaLIdle,
-      samR, samRIdle, samL, samLIdle,
-      carR, carRIdle, carL, carLIdle,
-      chiR, chiRIdle, chiL, chiLIdle,
-      umbR, umbRIdle, umbL, umbLIdle,
-    ];
-  
+      sonaR,
+      sonaRIdle,
+      sonaL,
+      sonaLIdle,
+      samR,
+      samRIdle,
+      samL,
+      samLIdle,
+      carR,
+      carRIdle,
+      carL,
+      carLIdle,
+      chiR,
+      chiRIdle,
+      chiL,
+      chiLIdle,
+      umbR,
+      umbRIdle,
+      umbL,
+      umbLIdle,
+    ]
+
     imageSources.forEach((src) => {
       // 使用 <Image /> 組件的 priority 屬性来預加載圖片
-      <Image key={src} src={src} priority={true} />;
-    });
+      ;<Image key={src} src={src} priority={true} />
+    })
 
     // 添加事件監聽器
-    window.addEventListener('keydown', handleKeyDown);
-    window.addEventListener('keyup', handleKeyUp);
+    window.addEventListener('keydown', handleKeyDown)
+    window.addEventListener('keyup', handleKeyUp)
 
     // 清除事件監聽器和資源
     return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-      window.removeEventListener('keyup', handleKeyUp);
-    };
-  }, []);
+      window.removeEventListener('keydown', handleKeyDown)
+      window.removeEventListener('keyup', handleKeyUp)
+    }
+  }, [])
   useEffect(() => {
     onMove(direction) // 將角色方向傳遞給父層、
   }, [direction])
@@ -242,7 +257,7 @@ export default function Teams({ onMove, onBgMove }) {
   }, [isMoving, direction])
 
   return (
-    <div tabIndex={0} className={`${styles.teamcontainer}`}>
+    <div className={`${styles.teamcontainer}`}>
       <Image id="umb" alt="Umb" src={umbSrc} className={`${styles.umb}`} />
       <Image id="chi" alt="Chi" src={chiSrc} className={`${styles.chi}`} />
       <Image id="car" alt="Car" src={carSrc} className={`${styles.car}`} />

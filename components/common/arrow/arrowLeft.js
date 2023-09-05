@@ -1,7 +1,9 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable prettier/prettier */
 import styles from './arrow.module.sass'
 import { useSwiper } from 'swiper/react'
 
-export default function Arrow({}) {
+export default function Arrow() {
   const swiper = useSwiper()
   return (
     <>

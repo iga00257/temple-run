@@ -1,3 +1,4 @@
+/* eslint-disable no-irregular-whitespace */
 import Image from 'next/image'
 import styles from './pid.module.sass'
 import Head from 'next/head'
